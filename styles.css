@@ -1,0 +1,159 @@
+html {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.home {
+    height: 100vh;
+    width: 100%;
+    background-color: #2b272f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.tagline {
+    display: block;
+    font-size: 50px;
+    font-weight: 700;
+    color: hsl(279, 31%, 89%);
+    margin: 0;
+}
+
+.subline {
+    font-size: 25px;
+    font-weight: 400;
+    color: #BAA5C6;
+    margin: 0;
+}
+
+.about {
+    background-color: white;
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.aboutheading {
+    font-size: 50px;
+    color: #2b272f;
+    font-weight: 700;
+    margin: 0;
+    padding-top: 20px;
+}
+
+.intro {
+    background-color: #2b272f;
+    color: hsl(279, 31%, 89%);
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project {
+    background-color: #2b272f;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+}
+.projectheading {
+    display: block;
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 40px 0;
+}
+
+.pic{
+    height: 170px;
+    width: 170px;
+}
+.contact{
+    background-color: white;
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.contactheading {
+    font-size: 50px;
+    color: #2b272f;
+    font-weight: 700;
+    margin: 0;
+    padding-top: 20px;
+} 
+.icons{
+    padding: 30px;
+    margin:30px;
+}
+label {
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #2d2640;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: lavenderblush;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #0a66c2;
+    color: white;
+}
+
+.fa-github {
+    background: #2b3137;
+    color: white;
+}
