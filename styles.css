@@ -1,9 +1,58 @@
+/* Basic resets */
 html {
     padding: 0;
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+    scroll-behavior: smooth;
+}
+
+/* Header styling */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    list-style-type: none;
+}
+
+.navbar a {
+    display: block;
+    color: #2d2640;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: lavenderblush;
+    color: #2b272f;
+}
+
+/* Home section styling */
 .home {
     height: 100vh;
     width: 100%;
@@ -13,29 +62,32 @@ html {
     justify-content: center;
     align-items: center;
     text-align: center;
+    color: hsl(279, 31%, 89%);
+    animation: fadeIn 2s ease-in-out;
 }
 
 .tagline {
-    display: block;
     font-size: 50px;
     font-weight: 700;
-    color: hsl(279, 31%, 89%);
     margin: 0;
+    animation: slideUp 1s ease-out;
 }
 
 .subline {
     font-size: 25px;
     font-weight: 400;
-    color: #BAA5C6;
     margin: 0;
+    animation: slideUp 1.5s ease-out;
 }
 
+/* About section styling */
 .about {
     background-color: white;
     min-height: 100vh;
     width: 100%;
     text-align: center;
     padding: 20px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .aboutheading {
@@ -44,6 +96,7 @@ html {
     font-weight: 700;
     margin: 0;
     padding-top: 20px;
+    animation: slideIn 1s ease-in-out;
 }
 
 .intro {
@@ -59,36 +112,60 @@ html {
     margin: 20px auto;
     max-width: 800px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s;
 }
 
+.intro:hover {
+    transform: scale(1.03);
+}
+
+/* Project section styling */
 .project {
     background-color: #2b272f;
     min-height: 100vh;
     width: 100%;
     display: flex;
-    flex-direction: row;
-    text-align: center;
+    flex-direction: column;
     align-items: center;
     padding: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+label{
+    color:white;
+    font-size: 14px;
+    font-weight: 400;
 }
 .projectheading {
-    display: block;
     font-size: 50px;
     font-weight: 700;
     color: white;
     margin: 0 0 40px 0;
+    animation: slideIn 1s ease-in-out;
 }
 
-.pic{
+.pic {
     height: 170px;
     width: 170px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
 }
-.contact{
+
+.pic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact section styling */
+.contact {
     background-color: white;
     min-height: 100vh;
     width: 100%;
     text-align: center;
     padding: 20px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .contactheading {
@@ -97,63 +174,54 @@ html {
     font-weight: 700;
     margin: 0;
     padding-top: 20px;
-} 
-.icons{
+    animation: slideIn 1s ease-in-out;
+}
+
+.icons {
     padding: 30px;
-    margin:30px;
-}
-label {
-    margin-top: 10px;
-    font-size: 14px;
-    color: white;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: white;
-    font-size: 12px;
-    font-weight: 300;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: #2d2640;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover {
-    background-color: lavenderblush;
+    margin: 30px;
 }
 
 .fa {
     padding: 20px;
     font-size: 30px;
-    width: 30px;
+    width: 50px;
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-.fa-facebook {
-    background: #3B5998;
+.fa-facebook:hover {
+    background: #3b5998;
     color: white;
+    transform: scale(1.1);
 }
 
-.fa-linkedin {
+.fa-linkedin:hover {
     background: #0a66c2;
     color: white;
+    transform: scale(1.1);
 }
 
-.fa-github {
+.fa-github:hover {
     background: #2b3137;
     color: white;
+    transform: scale(1.1);
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
